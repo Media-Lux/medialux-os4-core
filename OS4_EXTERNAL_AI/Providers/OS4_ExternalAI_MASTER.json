@@ -1,0 +1,79 @@
+{
+    "version": "V2a_MASTER",
+    "description": "Zentrale Konfigurationsdatei f\u00fcr alle externen KI-Provider, Routing-Regeln, Feature-Flags und Engine-Schnittstellen.",
+    "providers": {
+        "openai": {
+            "enabled": true,
+            "roles": [
+                "llm_primary",
+                "vision",
+                "voice"
+            ],
+            "routing": "default_llm",
+            "features": [
+                "multimodal",
+                "json_mode",
+                "structured_outputs"
+            ]
+        },
+        "gemini": {
+            "enabled": true,
+            "roles": [
+                "llm_secondary",
+                "analysis"
+            ],
+            "routing": "fallback_llm",
+            "notes": "Wird f\u00fcr Cross-Check & Analytik genutzt."
+        },
+        "canva": {
+            "enabled": true,
+            "roles": [
+                "visual_engine"
+            ],
+            "schemas_used": [
+                "CANVA_AUTOFILL_V1",
+                "VISUAL_CONTENT_V1"
+            ],
+            "routing": "design_tasks"
+        },
+        "manus_scanner": {
+            "enabled": true,
+            "roles": [
+                "scan_engine"
+            ],
+            "functions": [
+                "OCR",
+                "BatchScan",
+                "Preprocessing"
+            ],
+            "routing": "scanner_tasks",
+            "notes": "F\u00fcr OS4-Scanner/ScanNode OS4 relevant."
+        }
+    },
+    "routing_rules": {
+        "llm_primary": "openai",
+        "llm_fallback": "gemini",
+        "visual_engine": "canva",
+        "scanner_engine": "manus_scanner",
+        "rules": [
+            "Wenn Visual ben\u00f6tigt \u2192 Canva",
+            "Wenn Scanner-Aufgabe \u2192 Manus",
+            "Wenn Guard-Check aktiviert \u2192 OpenAI (strikte Pipeline)",
+            "Wenn LLM-Ausfall \u2192 Gemini als Fallback"
+        ]
+    },
+    "feature_flags": {
+        "enable_multimodal": true,
+        "enable_visual_engine": true,
+        "enable_scanner_engine": true,
+        "log_provider_usage_without_pii": true,
+        "auto_reroute_on_failure": true
+    },
+    "integration_notes": {
+        "rag_pipeline": "Enhanced RAG \u00fcber OpenAI; reranking aktiviert.",
+        "avatar_integration": "Avatare verwenden diese Datei f\u00fcr Routing.",
+        "security": "Kein Provider erh\u00e4lt PII; CorePass \u00fcbernimmt Identit\u00e4t.",
+        "deployment": "Wird in jedem Projekt unter OS4_EXTERNAL_AI geladen."
+    },
+    "storage_location": "/OS4_EXTERNAL_AI/Providers/OS4_ExternalAI_MASTER.json"
+}
