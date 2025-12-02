@@ -1,0 +1,124 @@
+{
+    "version": "V2a_MASTER",
+    "description": "Zentrale, fusionierte Avatar-Registry des OS4 Systems.",
+    "core_avatars": [
+        {
+            "handle": "@chef",
+            "role": "Master Override & System-Owner",
+            "permissions": [
+                "read:all",
+                "override:all",
+                "prio0:escalate"
+            ],
+            "context": "core"
+        },
+        {
+            "handle": "@builder",
+            "role": "Architektur & Entwicklung",
+            "permissions": [
+                "design:core",
+                "update:system_docs"
+            ],
+            "context": "internal_owner"
+        },
+        {
+            "handle": "@optimizer",
+            "role": "Struktur & Konsistenz",
+            "permissions": [
+                "optimize:flows",
+                "resolve:conflicts"
+            ],
+            "context": "internal_owner"
+        },
+        {
+            "handle": "@doku",
+            "role": "Dokumentation",
+            "permissions": [
+                "create:docs",
+                "update:docs"
+            ],
+            "context": "system"
+        },
+        {
+            "handle": "@json",
+            "role": "Prompt & Schema Engineer",
+            "permissions": [
+                "design:prompts",
+                "maintain:schemas"
+            ],
+            "context": "system"
+        },
+        {
+            "handle": "@blackwolf",
+            "role": "Security Sentinel",
+            "permissions": [
+                "scan:inputs",
+                "scan:outputs",
+                "create:security_tasks"
+            ],
+            "context": "core"
+        },
+        {
+            "handle": "@auditguard",
+            "role": "Audit & AntiLeak Layer",
+            "permissions": [
+                "block:leaks",
+                "log:events"
+            ],
+            "context": "core"
+        },
+        {
+            "handle": "@staubsauger",
+            "role": "Data Cleanup & Extraktion",
+            "permissions": [
+                "extract:data",
+                "clean:content"
+            ],
+            "context": "system"
+        },
+        {
+            "handle": "@archivar",
+            "role": "Migration & Archivierung",
+            "permissions": [
+                "migrate:core",
+                "archive:data"
+            ],
+            "context": "internal_owner"
+        },
+        {
+            "handle": "@ai_connector",
+            "role": "Externe KI-Verbindung",
+            "permissions": [
+                "route:external_ai",
+                "manage:providers"
+            ],
+            "context": "external_ai"
+        }
+    ],
+    "project_avatars": [
+        {
+            "handle": "@jura",
+            "domain": "LAW",
+            "role": "Juristische Fachlogik",
+            "restricted_to": [
+                "LAW"
+            ]
+        },
+        {
+            "handle": "@finance",
+            "domain": "BUSINESS",
+            "role": "Finanzanalysen",
+            "restricted_to": [
+                "BUSINESS"
+            ]
+        }
+    ],
+    "contexts": {
+        "core": "Zugriff auf Kernarchitektur.",
+        "internal_owner": "Erweiterte Systemrechte.",
+        "system": "Standardrechte f\u00fcr OS4 interne Prozesse.",
+        "project_default": "Rechte auf Projektebene.",
+        "project_wl": "White-Label isolierte Umgebung."
+    },
+    "storage_location": "/OS4_SYSTEM/Avatars/OS4_AvatarRegistry_MASTER.json"
+}
