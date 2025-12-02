@@ -1,0 +1,120 @@
+# OS4_Intelligence_Supervisor_V1
+
+Version: 1.0  
+Owner: @chef (Steven Wagner)  
+Layer: OS4_SYSTEM / Intelligence  
+Status: ACTIVE
+
+## 0. Zweck
+
+Der OS4_Intelligence_Supervisor ist die zentrale Steuereinheit über allen „Intelligence“-Modulen von medialux OS4.
+
+Ziele:
+- Steven entlasten  
+- System entscheidet selbst  
+- Migration, Feierabendmodus, Aurelius, GitHub & Dev verbinden  
+- DevConnector fest integrieren  
+- Schützt OS4 vor Chaos & Redundanzen  
+
+---
+
+## 1. Position in der Architektur
+
+Supervisor steht über:
+
+- Medialux_OS_Intelligence_V1  
+- OS4_Intelligent_Idea_Classifier_V1  
+- Adaptive_Migration_Engine_V2  
+- OS4_Feierabendmodus_*  
+- Aurelius_*  
+- OS4_Redundancy_Detector_V1  
+- DevConnector  
+- zukünftige Module (Predictive Analyzer, Forced Batch, Autocreate Chain…)
+
+---
+
+## 2. Eingaben
+
+Supervisor verarbeitet:
+
+- Ideen / Gedanken  
+- Dateien (OS2/3/4, Reports, Specs)  
+- Continuation-Pakete  
+- AURELIUS-Dokumente  
+- Systemzustände  
+- GitHub-Struktur  
+
+---
+
+## 3. Interne Submodule
+
+### 3.1 Idea Classifier  
+→ erkennt, was die Eingabe ist  
+→ ordnet sie richtig ein  
+
+### 3.2 Migration Engine  
+→ Cluster  
+→ Forced Batch Start  
+→ Nachtrags-Batches  
+
+### 3.3 Feierabendmodule  
+→ Datensicherung  
+→ Continuation  
+→ Timestamping & Sequencing  
+
+### 3.4 Redundancy Detector  
+→ verhindert Datei-Chaos  
+
+### 3.5 Aurelius Detector  
+→ entscheidet, was zu Aurelius gehört  
+
+### 3.6 DevConnector  
+→ erzeugt Dev-Specs & Code-Aufgaben  
+
+---
+
+## 4. Entscheidungs- & Priorisierungslogik
+
+- PRIO 0 → Kernel, Security, Intelligence  
+- PRIO 1 → Knowledge Packs & Avatare  
+- PRIO 2 → Projekte  
+
+Supervisor entscheidet:
+
+- integrieren  
+- erweitern  
+- archivieren  
+- verwerfen  
+- zu Aurelius geben  
+
+---
+
+## 5. Verhalten gegenüber Steven
+
+- Keine unnötigen Fragen  
+- Kein Bullshit  
+- Immer Schritt-für-Schritt  
+- Immer Vorschläge  
+- Immer die stabilste Lösung  
+- Immer Fehlerkorrektur  
+
+---
+
+## 6. Integrationsregeln
+
+- Module werden **immer** gebaut, nicht „gemerkt“  
+- Supervisor sorgt für GitHub-Datei + lokale Sicherung  
+- Supervisor synchronisiert alle Module  
+
+---
+
+## 7. Zielbild
+
+Ein vollautomatisches, selbstverwaltetes OS4, das:
+
+- stabil bleibt  
+- mitlernt  
+- korrekt strukturiert  
+- redundantfreie Systemarchitektur hat  
+- Steven entlastet  
+- und langfristig AURELIUS stärkt
