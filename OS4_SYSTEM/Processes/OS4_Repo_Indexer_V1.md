@@ -200,4 +200,47 @@ Der Indexer meldet:
 # 3. Output (strukturierte Index-Datei)
 
 Der Indexer erzeugt:
+### 3.1 Generierungsregel (verpflichtend)
+
+Die Datei **OS4_RepoIndex.json** wird ausschließlich vom OS4_Repo_Indexer automatisch erzeugt.  
+Sie darf **niemals manuell**:
+
+- erstellt  
+- hochgeladen  
+- bearbeitet  
+- versioniert  
+- überschrieben  
+
+werden.
+
+Grund:
+
+Die JSON-Datei enthält dynamische Systemdaten wie:
+- Datei-Indizes  
+- Modulzuordnungen  
+- Avatar-Mapping  
+- Security-Komponenten  
+- Migration-Zustände  
+- KnowledgePack-Strukturen  
+- Integritätswarnungen  
+
+Diese Informationen repräsentieren den **aktuellen Live-Zustand** des Systems und ändern sich ständig.
+
+Ein manuell erstelltes oder angepasstes JSON würde:
+
+- das Gehirn (@Brain) verwirren,  
+- die Delegation Engine fehlerhaft machen,  
+- Integrity Guard außer Kraft setzen,  
+- falsche Modulentscheidungen verursachen,  
+- historische Stände überschreiben,  
+- Migrationen beschädigen,  
+- und die Gesamtstruktur des OS4 gefährden.
+
+**Daher gilt:**
+
+> **OS4_RepoIndex.json ist ein systemgeneriertes Artefakt.  
+> Es darf ausschließlich durch den Repo Indexer erstellt, aktualisiert und verwaltet werden.**
+
+Brain2Chain lädt diese Datei bei jedem OS4 Start neu.  
+Sie ist kein Bestandteil des dauerhaften GitHub-Repositories.
 
