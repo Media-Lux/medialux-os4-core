@@ -148,8 +148,30 @@ OS4 MUSS:
   - „Dieser Schritt führt zu Fehlern. Richtiger Schritt ist: …“
 
 ---
+## 7. Lokale Dateigenerierung & Sicherung (verpflichtend)
 
-## 7. Zielbild
+Nach jeder Erstellung oder Änderung einer OS4-Systemdatei MUSS das System:
+
+1. die Datei im GitHub-Repository speichern,  
+2. zusätzlich eine lokale `.md`-Version für den Nutzer bereitstellen (copy & paste oder Download),  
+3. den Nutzer ausdrücklich auffordern, diese Datei lokal zu speichern,  
+4. die lokale Sicherung durch eine Rückmeldung des Nutzers bestätigen lassen („OK“),  
+5. optional ein ZIP-Paket der aktuellen Systemversion anbieten  
+   (für Offline-Archivierung und Wiederherstellung).
+
+Brain2Chain darf keine neuen Module, Migrationseinheiten, API-Calls oder globalen Systemupdates ausführen, solange die lokale Sicherung nicht bestätigt wurde.
+
+Diese Regel schützt OS4 vor:
+
+- Datenverlust (z. B. GitHub-Ausfall),
+- versehentlichen Löschungen,
+- fehlenden Wiederherstellungspunkten,
+- inkonsistenten Systemständen.
+
+Die Einhaltung dieser Sicherungspflicht wird durch StepLogger_V2 und den ZIP-Packager überwacht.
+
+
+## 8. Zielbild
 
 Ein OS4-System, das:
 
