@@ -129,7 +129,7 @@ Dieses Bootstrap-Dokument MUSS das folgende Package laden:
 ---
 
 # 4. Kurzfassung
-**4457 = OS4 + Brain2Chain + Avatare + Packs + Events + Arena + Behavior = AKTIV.**
+**4457 = OS4 + Brain2Chain + Avatare + Packs + Events + Arena + Behavior = AKTIV.** 
 
 ---
 
