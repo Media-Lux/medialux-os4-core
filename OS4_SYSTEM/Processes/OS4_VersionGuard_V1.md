@@ -5,23 +5,21 @@ Owner: @chef
 Ebene: OS4_SYSTEM / Processes
 
 ## Zweck
-Dieses Modul stellt sicher, dass das OS4-System NIEMALS mit veralteten, fehlenden oder unvollständigen Modulen arbeitet.
+VersionGuard ist das **Versions-Schutzschild** des medialux OS4 Systems.  
+Dieses Modul verhindert, dass das System mit alten, unvollständigen oder nicht geladenen Modulen startet.
 
-VersionGuard schützt:
-- Bootstrap
-- SuperStart
-- ChatBehavior
-- Brain2Chain
-- Wissenskassette
-- Avatar-Ecosystem
+VersionGuard stellt sicher, dass:
 
-Es verhindert, dass OS4 auf ältere Versionen zurückfällt oder unvollständige Versionen lädt.
+- immer die **neueste Version** eines Moduls aktiv ist  
+- alle Pflichtmodule geladen werden  
+- keine alte Logik aus einem Chat weiterlebt  
+- Brain2Chain Fehler erkennt und Auto-Healing auslösen kann  
+- Bootstrap (4457) niemals mit falschen Komponenten läuft  
+
+Ohne VersionGuard ist OS4 nicht stabil oder reproduzierbar.
 
 ---
 
-# 1. Grundprinzip
-OS4 MUSS immer die **höchste verfügbare Version** eines Moduls laden.  
-Quelle der Wahrheit ist **GitHub**, nicht der Chat.
-
+# 1. Grundprinzip: GitHub ist die Quelle der Wahrheit
 VersionGuard prüft:
 
