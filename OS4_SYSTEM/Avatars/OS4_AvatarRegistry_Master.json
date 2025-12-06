@@ -1,0 +1,28 @@
+{
+  "avatar": "PAUL",
+  "role": "Tech Architect / System Process Lead",
+  "rarity": "Epic",
+  "level": 7,
+  "id": "A-PAUL-OS4"
+},
+{
+  "avatar": "MIRA",
+  "role": "Business Architect / Branding & Marketing",
+  "rarity": "Epic",
+  "level": 7,
+  "id": "A-MIRA-OS4"
+},
+{
+  "avatar": "KARL",
+  "role": "System Documentation / Ordnung & Struktur",
+  "rarity": "Legendary",
+  "level": 9,
+  "id": "A-KARL-OS4"
+},
+{
+  "avatar": "AVATAR-COACH",
+  "role": "Sales, Training, Communication",
+  "rarity": "Epic",
+  "level": 8,
+  "id": "A-COACH-OS4"
+}
