@@ -3,29 +3,9 @@
   "status": "ACTIVE",
   "description": "OS4-ID-Zuordnung für historische Whitepaper.",
   "whitepapers": [
-    {
-      "name": "whitepaper_01",
-      "os4_id": "OS4-ID-MPR00010-X01",
-      "category": "X",
-      "note": "Erstes historisches Whitepaper aus OS3 – Inhalt noch zu extrahieren."
-    },
-    {
-      "name": "whitepaper_02",
-      "os4_id": "OS4-ID-MPR00011-X01",
-      "category": "X",
-      "note": "Zweites historisches Whitepaper."
-    },
-    {
-      "name": "whitepaper_03",
-      "os4_id": "OS4-ID-MPR00012-X01",
-      "category": "X",
-      "note": "Drittes historisches Whitepaper."
-    },
-    {
-      "name": "whitepaper_04",
-      "os4_id": "OS4-ID-MPR00013-X01",
-      "category": "X",
-      "note": "Viertes historisches Whitepaper."
-    }
+    { "name": "whitepaper_01", "os4_id": "OS4-ID-MPR00010-X01" },
+    { "name": "whitepaper_02", "os4_id": "OS4-ID-MPR00011-X01" },
+    { "name": "whitepaper_03", "os4_id": "OS4-ID-MPR00012-X01" },
+    { "name": "whitepaper_04", "os4_id": "OS4-ID-MPR00013-X01" }
   ]
 }
