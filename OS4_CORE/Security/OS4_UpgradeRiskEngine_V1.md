@@ -7,8 +7,10 @@ Owner: @chef
 ZWECK
 ============================================================
 
-Die UpgradeRiskEngine verhindert Rückwärtsentwicklung und gefährliche Änderungen.
-Sie prüft jedes Update (Kernel, Security, Dokumente, Avatare).
+Die UpgradeRiskEngine schützt OS4 vor gefährlichen Änderungen,
+Rückwärtsentwicklungen und inkompatiblen Updates. Jede Änderung
+(Kernel, Security, Packs, Avatare, IDs, Prozesse) wird analysiert,
+klassifiziert und bewertet.
 
 ============================================================
 FUNKTIONEN
@@ -16,22 +18,37 @@ FUNKTIONEN
 
 1. Impact Analysis  
    - Welche Module wären betroffen?  
-   - Welche Abhängigkeiten gehen verloren?  
+   - Welche Abhängigkeiten brechen?  
+   - Welche Regelsysteme kollidieren?
 
 2. Regression Warning  
-   - Erkennt, ob eine neue Version alte Features überschreibt  
+   - Erkennt, ob neue Version alte Features entfernt  
+   - verhindert rückwärtsgerichtete Entwicklung
 
 3. Alternatives Generator  
-   - Bietet Vorschläge:
-     * Merge statt Replace  
-     * Revision statt Überschreiben  
-     * Backup statt Löschung  
+   - schlägt sichere Optionen vor:
+       * MERGE statt Replace  
+       * Revision statt Überschreiben  
+       * Backup statt Entfernen
 
 4. Compatibility Matrix  
-   - Prüft: Kernel, Packs, Avatare, Security, IDs  
+   - vergleicht Kernel, Packs, Avatare, Security und IDs  
+   - erkennt Systeminkonsistenzen
 
 5. Chef Approval Required  
-   - Kritische Änderungen benötigen @chef-Freigabe  
+   - kritische Änderungen werden blockiert  
+   - Freigabe nur durch @chef
+
+============================================================
+RISK LEVEL
+============================================================
+
+- LOW  
+- MID  
+- HIGH  
+- CRITICAL  
+
+Jede Migration oder Systemänderung erhält ein Risiko-Level.
 
 ============================================================
 OUTPUT
@@ -39,8 +56,9 @@ OUTPUT
 
 - Warnungen  
 - Empfehlungen  
-- sichere Alternativen  
-- Risiko-Level (LOW / MID / HIGH / CRITICAL)  
+- Alternativlösungen  
+- sichere Migrationswege  
+- Upgrade-Strategien
 
 ============================================================
 ENDE
