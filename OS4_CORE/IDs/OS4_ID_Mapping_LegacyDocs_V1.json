@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "status": "ACTIVE",
+  "description": "Mapping von wichtigen Legacy- und Migrationsdokumenten auf OS4-IDs.",
+  "documents": [
+    {
+      "filename": "OS4_Migration_Guide_V2.md",
+      "path": "/OS4_DEV_GUIDES/",
+      "os4_id": "OS4-ID-MPR00001-C01",
+      "category": "C",
+      "note": "Aktueller Hauptleitfaden für OS4-Migration."
+    },
+    {
+      "filename": "OS4_Migration_Checklist_V2.md",
+      "path": "/OS4_DEV_GUIDES/",
+      "os4_id": "OS4-ID-MPR00002-C01",
+      "category": "C",
+      "note": "Aktuelle Checkliste für OS4-Migration."
+    },
+    {
+      "filename": "OS4_Assistant_KnowledgeMemory_Rules_V1.docx",
+      "path": "/OS4_CORE/Boundary/",
+      "os4_id": "OS4-ID-MPR00003-C01",
+      "category": "C",
+      "note": "Zentrale Memory- und Boundary-Regeln des Assistenten."
+    },
+    {
+      "filename": "OS4_Migration_Guide_V1.docx",
+      "path": "/OS4_DEV_GUIDES/",
+      "os4_id": "OS4-ID-MPR00004-X01",
+      "category": "X",
+      "note": "Legacy-Variante des Migration Guides, für Archivzwecke."
+    },
+    {
+      "filename": "OS4_Migration_Checklist.json",
+      "path": "/OS4_DEV_GUIDES/",
+      "os4_id": "OS4-ID-MPR00005-X01",
+      "category": "X",
+      "note": "Legacy-Checkliste, ersetzt durch V2."
+    }
+  ]
+}
