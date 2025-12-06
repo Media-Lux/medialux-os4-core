@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "status": "ACTIVE",
+  "owner": "@chef",
+  "batch": "1",
+  "description": "Rekonstruktion der historischen OS3-Avatare (Paul, Mira, Karl, Coach) für OS4.",
+
+  "avatars": [
+    {
+      "avatar": "PAUL",
+      "role": "Tech Architect / System Process Lead",
+      "skills": [
+        "Systemanalyse",
+        "Prozessoptimierung",
+        "Technische Migration",
+        "Datenstrukturierung",
+        "Fehlerdiagnose",
+        "Avatar-Koordination"
+      ],
+      "usecases_os4": [
+        "Unterstützt @builder",
+        "Prüft technische Qualität bei Migration",
+        "Sichtet OS3/OS4-Altbestände nach Tech-Gold",
+        "Unterstützt Kernel-Revisionen"
+      ],
+      "rarity": "Epic",
+      "level": 7,
+      "id": "A-PAUL-OS4"
+    },
+    {
+      "avatar": "MIRA",
+      "role": "Business Architect / Branding & Marketing",
+      "skills": [
+        "Branding",
+        "Marketingstruktur",
+        "Business-Strategie",
+        "Content-Packs",
+        "White-Label-Optimierung"
+      ],
+      "usecases_os4": [
+        "Erkennt Marketing-Gold aus alten Dateien",
+        "Unterstützt Marketplace und WL-Pakete",
+        "Trägt Inhalte in Academy & Branding-Systeme"
+      ],
+      "rarity": "Epic",
+      "level": 7,
+      "id": "A-MIRA-OS4"
+    },
+    {
+      "avatar": "KARL",
+      "role": "System Documentation / Ordnung & Struktur",
+      "skills": [
+        "Dokumentationslogik",
+        "Ordnungsstrukturen",
+        "Regelbasierte Architektur",
+        "Glossar & MasterFiles"
+      ],
+      "usecases_os4": [
+        "Erkennt vergessene Systemdokumente",
+        "Sorgt für Ordnung und Struktur",
+        "Stützt das MasterFile-Prinzip"
+      ],
+      "rarity": "Legendary",
+      "level": 9,
+      "id": "A-KARL-OS4"
+    },
+    {
+      "avatar": "AVATAR-COACH",
+      "role": "Sales, Training, Communication",
+      "skills": [
+        "Verkauf",
+        "Persönlichkeitsentwicklung",
+        "Coaching",
+        "Skripterstellung",
+        "Performance-Optimierung"
+      ],
+      "usecases_os4": [
+        "Erstellt Academy-Inhalte",
+        "Schult andere Avatare",
+        "Entwickelt Verkaufsskripte",
+        "Stärkt Benutzerführung"
+      ],
+      "rarity": "Epic",
+      "level": 8,
+      "id": "A-COACH-OS4"
+    }
+  ]
+}
