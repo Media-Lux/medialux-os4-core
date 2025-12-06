@@ -53,3 +53,71 @@ id_inventory_mode:
       * Archivierung
       * GitHub-Abgleich
       * Systemstart 4457
+============================================================
+SEKTOR M – MIGRATION PIPELINE (EVOLUTION LAYER AKTIV)
+============================================================
+
+Dieser Sektor definiert die standardisierte Pipeline für alle
+Migrationen im OS4-System (Dateien, ZIPs, OS3/OS4-Altbestände,
+sowie durch WebIngestionEngine eingebrachte Inhalte).
+
+ZIEL:
+- Keine blinde Migration.
+- Nutzung des kompletten Evolution Layers.
+- Nachvollziehbarkeit und Sicherheit bei allen Änderungen.
+
+MIGRATIONS-PIPELINE (LOGISCHE REIHENFOLGE):
+
+1) Quelle erfassen
+   - Lokale Datei (DOCX, PDF, ZIP, JSON, CSV, …)
+   - Chat-Export / Legacy-Content
+   - URL / Web-Inhalt / Video (via WebIngestionEngine)
+
+2) MetaMatrix
+   - Erkennung von:
+     * Thema (z. B. System, Tokenomics, Academy, Marketing)
+     * Projekt (z. B. medialux, BioTECH, Brand2Chain)
+     * relevanten Avataren (MIRA, PAUL, KARL, COACH, AURELIUS etc.)
+
+3) Migration_IntelligenceEngine
+   - Analyse & Gold-Extraktion.
+   - Wertklassifikation (A–E).
+   - Vorschläge: Was ist System-Gold? Was ist nur Kontext? Was ist Legacy?
+
+4) ID_IntelligenceEngine
+   - Vergibt oder rekonstruiert OS4-IDs.
+   - Dokument-ID-Format (inkl. Zeitstempel):
+     OS4-ID-MPR#####-[Kategorie][Nummer]-YYYYMMDD-HHMM
+
+5) GitHubCheckEngine_V3
+   - Entscheidet:
+     * NEW_FILE
+     * REVISION
+     * MERGE
+     * SKIP
+   - Verhindert Dubletten und stille Überschreibungen.
+
+6) UpgradeRiskEngine
+   - Bewertet Risiko-Level:
+     LOW / MID / HIGH / CRITICAL.
+   - Gibt Alternativen:
+     MERGE statt Replace,
+     Revision statt Überschreiben,
+     Backup bei Unsicherheit.
+
+7) SimulationEngine (optional, bei MID+ und kritischen Fällen)
+   - Testet Auswirkungen:
+     * Systemstruktur
+     * Userflows
+     * Tokenomics/Ökonomie (falls relevant über AureliusCore)
+
+8) Ergebnis
+   - Erzeugung/Update einer OS4-Kassette.
+   - Vorschlag für GitHub-Commit (Pfad, Name, Beschreibung).
+   - Kein direkter Live-Change ohne @chef-Freigabe bei HIGH/CRITICAL.
+
+HINWEIS:
+- MobileCaptureEngine speist NUR die Pending-Queue und löst diese
+  Pipeline erst aus, wenn @chef am Desktop die Verarbeitung freigibt.
+- MatrixAwareContext und MetaMatrix liefern den Kontext,
+  aber Migration läuft IMMER über diese Pipeline.
