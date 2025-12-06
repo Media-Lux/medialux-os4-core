@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "status": "ACTIVE",
+  "description": "Index historischer Whitepaper aus OS3/OS4-Vorversionen",
+  "whitepapers_detected": [
+    "whitepaper_01",
+    "whitepaper_02",
+    "whitepaper_03",
+    "whitepaper_04"
+  ],
+  "action": "Reconstruction Pending",
+  "notes": "Whitepaper-Inhalte werden in Batch2 vollständig extrahiert und zu OS4-Strategieelementen transformiert."
+}
