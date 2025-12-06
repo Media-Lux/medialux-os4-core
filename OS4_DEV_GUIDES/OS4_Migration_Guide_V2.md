@@ -1,80 +1,58 @@
 # OS4_Migration_Guide_V2
 Version: 2.0  
 Status: ACTIVE  
-Owner: @chef  
-Ebene: OS4_DEV_GUIDES
+Owner: @chef
 
-## ersetzt alte Datei:
-OS4_Migration_Guide_V1.docx
+============================================================
+ZWECK
+============================================================
 
-## Zweck
-Dieses Modul definiert die **moderne OS4-Migrationslogik**,  
-um Systemwissen, Dateien, Module und Prozesse sauber zu:
+Dieser Guide beschreibt den vollständigen Ablauf der OS4-Migration:
+- Goldschürfung
+- Analyse
+- Evolution
+- Rekonstruktion
+- Integration
+- GitHub-Standards
+- ID-System
+- Final Merge
 
-- modernisieren  
-- konsolidieren  
-- vereinheitlichen  
-- archivieren  
-- erweitern  
+============================================================
+KERNPRINZIPIEN
+============================================================
 
-Version 2 ist vollständig kompatibel mit:
-- Brain2Chain Kernel  
-- VersionGuard  
-- OS4_SystemAnweisung_V2  
-- OS4_BackupBatch_Rule_V2  
-- OS4_Master_Storage_Map_V2  
-- OS4_CoreKernel_V2_Complete  
+1. So wenig Dateien wie möglich (Master-/Kassettenprinzip)
+2. Alles wird komprimiert, nie kopiert
+3. OS3/alte OS4-Versionen werden als Goldquelle behandelt
+4. IntelligenceEngine entscheidet Wert & Relevanz
+5. GitHubCheckEngine schützt Struktur & Integrität
+6. ID-System garantiert eindeutige Identität
+7. Keine Migration ohne Chef-Freigabe
 
----
+============================================================
+MIGRATIONSFLUSS
+============================================================
 
-# 1. Ziele des Migrationssystems
+1. Ingestion  
+2. Analysis  
+3. Gold Extraction  
+4. ID Reconstruction  
+5. Integration Planning  
+6. GitHubCheck (NEW/REVISION/MERGE/SKIP)  
+7. Final Merge  
 
-Die Migration MUSS sicherstellen, dass:
+============================================================
+OUTPUT
+============================================================
 
-- **alle alten Dateien modernisiert oder archiviert werden**  
-- **keine Wissensinseln im Chat zurückbleiben**  
-- **GitHub immer das zentrale Wissenssystem bleibt**  
-- **keine Datei das System bricht**  
-- **OS4 immer vollständig geladen werden kann**  
-- **Brain2Chain alle Prozesse überwachen kann**
+- neue OS4-Kassetten  
+- kernel upgrades  
+- avatar upgrades  
+- neue knowledge packs  
+- archivierte legacy files  
+- optimierte Dokumentation  
+- saubere GitHub-Struktur
 
-Migration ist der wichtigste Bestandteil eines wachsenden OS4-Systems.
-
----
-
-# 2. Migrations-Typen
-
-### 2.1 Modernisierung (STANDARD)
-Eine alte Datei wird transformiert in:
-- einen neuen Dateinamen  
-- moderne OS4-Struktur  
-- korrekten Pfad  
-- Markdown-Format  
-- Versionierung  
-- Brain2Chain-Kompatibilität  
-- VersionGuard-Registrierung  
-
-### 2.2 Konsolidierung
-Mehrere alte Dateien → 1 Master-Datei.
-Wird speziell für Master-Systemdokumentationen genutzt.
-
-### 2.3 Archivierung
-Nur wenn Steven es explizit befiehlt:
-→ Datei wird in `/OS4_ARCHIVE/` abgelegt.  
-→ Wird NICHT mehr geladen.
-
-### 2.4 Neuerstellung
-Neue Module entstehen durch:
-- Arbeitsanweisungen  
-- Regeln  
-- Prozesse  
-- Systemlogik  
-
----
-
-# 3. Batch-Regeln (Pflicht)
-
-Migration erfolgt ausschließlich in Batches von **maximal 10 Dateien**.
-
-Nach jedem Batch MUSS ausgeführt werden:
-
+============================================================
+ENDE
+============================================================
