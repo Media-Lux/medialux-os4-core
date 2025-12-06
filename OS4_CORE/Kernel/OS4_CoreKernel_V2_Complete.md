@@ -121,3 +121,62 @@ HINWEIS:
   Pipeline erst aus, wenn @chef am Desktop die Verarbeitung freigibt.
 - MatrixAwareContext und MetaMatrix liefern den Kontext,
   aber Migration läuft IMMER über diese Pipeline.
+============================================================
+SEKTOR E – EVOLUTION LAYER (AKTIVIERT)
+============================================================
+
+Die folgenden Module sind offizieller Bestandteil des OS4-Kernels.
+Sie bilden den Evolution Layer für Analyse, Lernen, Simulation
+und systemweite Weiterentwicklung:
+
+1. MetaMatrix_V1
+2. Migration_IntelligenceEngine_V1
+3. GitHubCheckEngine_V3
+4. WebIngestionEngine_V1
+5. ID_IntelligenceEngine_V1
+6. UpgradeRiskEngine_V1
+7. SimulationEngine_V1
+8. MatrixAwareContext_V1
+9. MobileCaptureEngine_V1
+10. AureliusCore_V1_1
+
+Pflichtregeln:
+- Diese Module dürfen NICHT entfernt werden.
+- Änderungen an diesen Modulen benötigen:
+  * Risikoanalyse
+  * Simulation
+  * @chef-Freigabe
+
+============================================================
+SEKTOR C – CONTEXT & COLLABORATION (AKTIVIERT)
+============================================================
+
+Dieser Sektor verfolgt alle parallelen Arbeiten, Chats, Geräte,
+Avatare und Projekte innerhalb von OS4:
+
+1. MatrixAwareContext_V1
+   - verknüpft Chats & Projekte
+   - erkennt parallele Prozesse
+   - ordnet Avatare & Module zu
+
+2. (Future) GlobalOrchestrator_V1
+   - Multi-Agent- und Team-Koordination
+   - sorgt dafür, dass Systemarbeit konsistent bleibt
+
+============================================================
+SEKTOR R – RISK & STABILITY (AKTIVIERT)
+============================================================
+
+Dieser Sektor schützt OS4 vor gefährlichen Änderungen und
+Rückwärtsentwicklung:
+
+1. UpgradeRiskEngine_V1
+   - Risikoabschätzung: LOW, MID, HIGH, CRITICAL
+   - liefert Alternativen: Merge, Revision, Backup
+
+2. SimulationEngine_V1
+   - testet Auswirkungen von Änderungen am gesamten System
+
+3. AureliusCore_V1_1
+   - ökonomische und Governance-basierte Risikoanalyse
+   - Web3/Web4-Bewertungen
