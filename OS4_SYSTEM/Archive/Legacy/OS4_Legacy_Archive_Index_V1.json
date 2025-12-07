@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "status": "ACTIVE",
+  "description": "Index aller Legacy-Dateien, die archiviert aber nicht gelöscht werden. Dient zur Sicherung historischer Kontexte.",
+  "legacy_files": [
+    {
+      "filename": "OS4_Migration_Guide_V1.docx",
+      "reason": "Ersetzt durch OS4_Migration_Guide_V2",
+      "id": "OS4-ID-MPR00004-X01"
+    },
+    {
+      "filename": "OS4_Migration_Checklist.json",
+      "reason": "Ersetzt durch OS4_Migration_Checklist_V2",
+      "id": "OS4-ID-MPR00005-X01"
+    }
+  ],
+  "note": "Diese Dateien bleiben erhalten, werden aber systemseitig nicht mehr verwendet. Sie dürfen die Evolution Layer Pipeline nicht durchlaufen."
+}
