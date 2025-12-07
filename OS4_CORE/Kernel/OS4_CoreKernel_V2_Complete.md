@@ -139,6 +139,10 @@ und systemweite Weiterentwicklung:
 8. MatrixAwareContext_V1
 9. MobileCaptureEngine_V1
 10. AureliusCore_V1_1
+11. AcademyEngine_V1
+   - generiert Lernstrukturen aus OS4-Wissen
+   - arbeitet mit MetaMatrix und ContentEngine
+   - Pflichtmodul für WL-Kunden-Enablement und internes Wachstum
 
 Pflichtregeln:
 - Diese Module dürfen NICHT entfernt werden.
