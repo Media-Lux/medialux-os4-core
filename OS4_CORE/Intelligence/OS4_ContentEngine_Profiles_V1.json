@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "status": "ACTIVE",
+  "platforms": [
+    {
+      "platform": "TikTok",
+      "content_types": ["ShortForm", "Video15s", "Quote"],
+      "max_length": 2200,
+      "tone": "dynamisch, emotional, schnell"
+    },
+    {
+      "platform": "YouTube",
+      "content_types": ["VideoScript", "LongForm", "ShortForm"],
+      "tone": "erklärend, hochwertig, professionell"
+    },
+    {
+      "platform": "Instagram",
+      "content_types": ["ShortForm", "Carousel", "Quote"],
+      "tone": "visuell, inspirierend"
+    },
+    {
+      "platform": "LinkedIn",
+      "content_types": ["LongForm", "ThoughtLeadership", "BusinessPost"],
+      "tone": "seriös, analytisch, fachlich"
+    }
+  ]
+}
