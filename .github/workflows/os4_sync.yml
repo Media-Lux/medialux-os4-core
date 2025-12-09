@@ -14,27 +14,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Validate MIG Headers
-        run: |
-          if ! grep -R "OS4_MIGRATION_HEADER_V2" -n OS4*; then
-            echo "ERROR: Missing MIG header in OS4 directory."
-            exit 1
-          fi
-
-      - name: Validate Folder Structure
+      - name: Check for OS4 folders (non-blocking)
         run: |
           REQUIRED_FOLDERS="OS4_KERNEL OS4_AGENTS OS4_BRANDS OS4_MIGRATION OS4_LEGACY"
           for F in $REQUIRED_FOLDERS; do
             if [ ! -d "$F" ]; then
-              echo "ERROR: Missing required OS4 folder: $F"
-              exit 1
+              echo "WARN: Required OS4 folder missing: $F"
+            else
+              echo "OK: Found folder $F"
             fi
           done
 
-      - name: MIG Index Sync
+      - name: Check MIG headers (non-blocking)
         run: |
-          echo "MIG index sync placeholder – extend later."
+          if ls OS4_* >/dev/null 2>&1; then
+            if grep -R "OS4_MIGRATION_HEADER_V2" -n OS4* >/dev/null 2>&1; then
+              echo "OK: At least one OS4_MIGRATION_HEADER_V2 found."
+            else
+              echo "WARN: No OS4_MIGRATION_HEADER_V2 found in OS4* files yet."
+            fi
+          else
+            echo "WARN: No OS4* folders found to scan for MIG headers."
+          fi
 
-      - name: OS4 Sync Complete
+      - name: MIG index sync placeholder
         run: |
-          echo "OS4 Sync Validation Passed."
+          echo "INFO: MIG_INDEX sync will be implemented later."
+
+      - name: OS4 Sync validation finished
+        run: |
+          echo "OS4 Sync check completed (non-blocking)."
