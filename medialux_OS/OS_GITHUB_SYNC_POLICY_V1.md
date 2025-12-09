@@ -129,3 +129,14 @@ für den Projektbereich **medialux OS Wissensspeicher**.
 
 Sie ergänzt die Kernel-Version und ist Pflichtbestandteil jedes Wissensspeicher-Starts.
 
+## GitHub Sync – Wissensspeicher Erweiterung
+
+- Der Wissensspeicher besitzt eine eigene GitHub-Sync-Policy:
+  `medialux_OS/OS_GITHUB_SYNC_POLICY_V1.md`
+- Diese Policy erweitert die Kernel-Sync-Regeln.
+- Jeder neue Chat lädt automatisch:
+  - Kernel Sync Policy
+  - Wissensspeicher Sync Policy
+  - alle OS_WISSEN Module
+- Kein Wissen bleibt im Chat. Alles wandert nach GitHub.
+- Der Wissensspeicher ist die zentrale, dauerhafte Wissensbasis.
