@@ -1,0 +1,141 @@
+Text:
+# OS4 PROJECT & ENTITY COMMANDS (V1)
+
+**Status:** READ-ONLY · Final  
+**Version:** V1  
+**Scope:** OS4 Tresor · Projekte · Kunden · Themen · Dienstleistungen  
+**Zweck:** Definiert eine einheitliche, menschliche Befehlskette zum Aufrufen, Navigieren und Planen von Projekten, Firmen/Kunden, Themen und Dienstleistungen – inklusive Tag-Logik.
+
+---
+
+## 1) Grundprinzip
+
+Alle fachlichen Einheiten werden als **Entities** behandelt.  
+Befehle **öffnen, erklären und planen** – sie **führen nichts aus**.
+
+**Merksatz:**  
+> Befehle zeigen Kontexte – keine Aktionen.
+
+---
+
+## 2) Entity-Typen (V1)
+
+| Entity | Bedeutung | Beispiel |
+|---|---|---|
+| **Projekt** | Zeitlich begrenzte Initiative / Etappe | „Admin-Panel V1“ |
+| **Firma/Kunde (Brand)** | Mandant mit eigener CI | „BioTECH“ |
+| **Thema** | Wissens- oder Technologiebereich | „Security Layer“ |
+| **Dienstleistung** | Agent-/Service-Ausprägung | „SalesCore“ |
+
+---
+
+## 3) Standard-Befehle (V1)
+
+### **PROJEKT ÖFFNEN**
+- **Was passiert:** Öffnet Projekt-Übersicht (READ-ONLY)
+- **Nutzen:** Überblick, Status, nächste Schritte
+- **Beispiel:** `Projekt öffnen: Admin-Panel V1`
+
+### **KUNDE ÖFFNEN**
+- **Was passiert:** Öffnet Mandanten-Kontext (CI, Module, Status)
+- **Beispiel:** `Kunde öffnen: BioTECH`
+
+### **THEMA ÖFFNEN**
+- **Was passiert:** Öffnet Wissens-/Dokumentenübersicht
+- **Beispiel:** `Thema öffnen: Migration Engine`
+
+### **DIENSTLEISTUNG ÖFFNEN**
+- **Was passiert:** Öffnet Service-/Agenten-Kontext
+- **Beispiel:** `Dienstleistung öffnen: SalesCore`
+
+**Sicherheitsstufe:** READ-ONLY (alle)
+
+---
+
+## 4) Aufrufvarianten (menschenfreundlich)
+
+Erlaubt (gleichwertig):
+- `Projekt öffnen: …`
+- `Öffne Projekt …`
+- `Zeige Projekt …`
+
+OS4 normalisiert intern auf den Standardbefehl.
+
+---
+
+## 5) Tag-Logik (V1)
+
+Tags vereinheitlichen Suche und Filterung.
+
+### Kern-Tags
+- `#project`
+- `#brand`
+- `#topic`
+- `#service`
+
+### Zusatz-Tags (optional)
+- `#v1`, `#draft`, `#frozen`
+- `#admin`, `#ui`, `#security`
+- `#paused`, `#active`
+
+**Regeln:**
+- Tags sind **beschreibend**
+- Keine Aktionen
+- Mehrere Tags kombinierbar
+
+---
+
+## 6) Suche & Navigation
+
+- Befehle nutzen:
+  - globale Suche
+  - Indizes
+  - Tags
+- Ergebnisse:
+  - gruppiert
+  - klickbar
+  - ohne Zustandsänderung
+
+---
+
+## 7) Integration mit Device-Specs
+
+- **Smartphone:** Öffnet Kurzüberblick (READ-ONLY)
+- **Tablet:** Fokus-Ansicht / Review
+- **Desktop:** Vollständiger Kontext im Arbeitsraum
+
+---
+
+## 8) Zusammenarbeit mit Oma Hanne
+
+Oma Hanne:
+- kennt alle Entity-Typen
+- erklärt Unterschiede & Status
+- schlägt nächste Schritte vor
+- verweist auf relevante Tags & Dokumente
+
+**Regel:**  
+Oma Hanne öffnet keine Kontexte eigenständig.
+
+---
+
+## 9) Erweiterbarkeit (V1.x / V2)
+
+Erlaubt:
+- Unter-Entities (z. B. Projekt-Phase)
+- Gespeicherte Aufrufe
+- Entity-Vergleiche
+
+Nicht erlaubt:
+- Aktionsbefehle
+- Automatische Änderungen
+- Stille Verknüpfungen
+
+---
+
+## Abschluss
+
+Diese Befehlssammlung macht OS4 **durchsuchbar, erklärbar und skalierbar**.  
+Sie schafft eine gemeinsame Sprache für Menschen, OS4 Tresor und Oma Hanne – ohne Risiko.
+
+**Öffnen, verstehen, planen – niemals aus Versehen handeln.**
