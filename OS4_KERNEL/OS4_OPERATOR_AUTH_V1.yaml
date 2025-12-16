@@ -1,0 +1,22 @@
+---
+file: OS4_OPERATOR_AUTH_V1
+version: 1.0
+description: >
+  Operator-Level-Authentifizierung für OS4 TRESOR.
+  Liest den PIN-Wert aus GitHub Secrets.
+operators:
+  - id: "chef"
+    level: 10
+    pin_source: "OS4_OPERATOR_PIN"
+    verification: sha256
+rules:
+  require_pin_for_commands:
+    - /api/push
+    - /api/migrate
+    - /api/security/lock
+    - /api/security/unlock
+audit:
+  verified_by: "@blackwolf"
+  compliance_checked_by: "@jura"
+  created: "OS4_SECURITY_PHASE1"
+---
