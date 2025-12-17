@@ -3,7 +3,8 @@ file: OS4_WHITE_LABEL_SECURITY_V1
 version: 1.0
 author: "@chef (Operator Level 10)"
 verified_by: "@blackwolf"
-audited_by: "@jura"
+audited_by: "@jura (placeholder – activation after migration)"
+# JURA_PLACEHOLDER_ACTIVE – Juristische Instanz derzeit deaktiviert (Migration pending)
 description: >
   Offizielle Governance-Definition für White-Label- und Clone-Systeme
   der OS4 TRESOR Plattform.
@@ -68,7 +69,8 @@ layers:
 ownership:
   protected_by: "@chef"
   monitored_by: "@blackwolf"
-  audited_by: "@jura"
+  audited_by: "@jura (placeholder – activation after migration)"
+  # JURA_PLACEHOLDER_ACTIVE – Juristische Instanz derzeit deaktiviert (Migration pending)
 clone_type:
   linked: preferred
   detached: restricted
