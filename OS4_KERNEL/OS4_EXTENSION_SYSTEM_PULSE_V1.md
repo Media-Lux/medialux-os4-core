@@ -3,7 +3,8 @@ file: OS4_EXTENSION_SYSTEM_PULSE_V1
 version: 1.0
 author: "@chef (Operator Level 10)"
 verified_by: "@blackwolf"
-audited_by: "@jura"
+audited_by: "@jura (placeholder – activation after migration)"
+# JURA_PLACEHOLDER_ACTIVE – Juristische Instanz derzeit deaktiviert (Migration pending)
 description: >
   UI- und Systemerweiterung für den OS4 TRESOR.
   Integriert animierten Lebenspuls, Simulationsmodus und Diagnostik-Dashboard
