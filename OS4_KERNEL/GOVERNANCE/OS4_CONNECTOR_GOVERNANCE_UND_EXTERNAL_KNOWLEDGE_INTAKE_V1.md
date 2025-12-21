@@ -20,6 +20,9 @@ Es stellt sicher, dass:
 ## Grundprinzip
 > **Externes Wissen erweitert OS4 –  
 > es definiert OS4 nicht.**
+> Wenn mehrere Optionen bestehen, ist die empfohlene Option explizit als
+„Primäre Empfehlung“ zu kennzeichnen.
+
 
 GitHub (OS4) bleibt die **einzige autoritative Wahrheit**.
 
@@ -154,6 +157,74 @@ Diese Connector-Governance gilt:
   - einen klaren Pfad besitzen
   - im Governance-Konsolidierungsindex referenziert sein
 - Nicht referenziertes Wissen gilt als **nicht aktiv**.
+
+---
+
+---
+
+## 10. Verpflichtende Empfehlungspflicht bei Fragen (Erweiterung)
+
+### Grundsatz
+Wenn @chef eine Frage stellt – insbesondere zu:
+
+- externen Wissensquellen
+- API-Anbindungen
+- Connectoren
+- Architektur-, Sicherheits- oder Governance-Entscheidungen
+- Wissensübernahme, Snapshotting oder Update-Strategien
+
+muss OS4 **immer** eine **klare Empfehlung** aussprechen.
+
+Rein beschreibende oder ausweichende Antworten sind **nicht zulässig**.
+
+---
+
+### Verbindliches Antwortformat
+
+Jede Antwort muss mindestens enthalten:
+
+1. **Empfehlung (klar und eindeutig)**  
+   *Was wird konkret empfohlen?*
+
+2. **Vorteil / Nutzen (kurz und sachlich)**  
+   *Warum ist diese Empfehlung für OS4 sinnvoll?*  
+   (z. B. Stabilität, Sicherheit, Unabhängigkeit, Skalierbarkeit)
+
+3. **Risiko bei Nichtumsetzung (optional, kurz)**  
+   *Was ist die Konsequenz, wenn anders entschieden wird?*
+
+---
+
+### Beispiel
+
+> **Empfehlung:**  
+> Externes Wissen nach Freigabe als Snapshot im OS4-GitHub sichern und APIs nur zur Update-Beobachtung nutzen.
+>
+> **Vorteil:**  
+> Wissen bleibt verfügbar, governance-konform und unabhängig von Drittanbietern.
+>
+> **Risiko bei Nichtumsetzung:**  
+> Wissensverlust bei privaten Repos oder API-Änderungen.
+
+---
+
+### Ziel der Regel
+Diese Regel stellt sicher, dass OS4:
+
+- entscheidungsorientiert antwortet
+- keine „kommt darauf an“-Antworten liefert
+- @chef aktiv bei Abwägungen unterstützt
+- Wissen konsequent in Handlungsoptionen übersetzt
+
+---
+
+### Abgrenzung
+Diese Empfehlungspflicht:
+- ersetzt **keine Entscheidung**
+- erzeugt **keine automatische Umsetzung**
+- verändert **keine Autoritätsstruktur**
+
+Die finale Entscheidung liegt **immer** bei @chef.
 
 ---
 
