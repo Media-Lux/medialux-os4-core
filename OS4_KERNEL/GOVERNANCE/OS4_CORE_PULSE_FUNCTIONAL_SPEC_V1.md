@@ -241,6 +241,83 @@ CORE-PULSE gilt als korrekt gebaut, wenn:
 
 ## 14. Device-Policy (V1 – verbindlich)
 
+---
+
+## 15. CI, Typografie & einfache Anpassbarkeit
+
+### Ziel
+CORE-PULSE OS4 soll:
+- visuell konsistent sein
+- professionell wirken
+- **ohne Umbau** anpassbar bleiben (CI-Wechsel, Branding, Kunden)
+
+---
+
+### Grundsatz
+> **CI ist konfigurierbar – nicht hart codiert.**
+
+Kein Re-Design bei CI-Änderungen.
+
+---
+
+### Typografie (Empfehlung, nicht Zwang)
+
+**Überschriften:**
+- Primär: **Orbitron**
+- Alternativ: System-Fallback (sans-serif)
+
+**Fließtext / Erklärungen:**
+- Primär: **Oxanium**
+- Alternativ: System-Fallback
+
+**UI-/Meta-Texte:**
+- Neutral, gut lesbar
+- Keine dekorativen Fonts
+
+---
+
+### Regeln
+- Keine Schriftart darf fest im Code verdrahtet sein
+- Alle Fonts müssen:
+  - zentral konfigurierbar sein
+  - austauschbar ohne Layoutbruch
+- Schriftgrößen skalieren relativ, nicht absolut
+
+---
+
+### Farben & Theme
+- Farben sind **Theme-Variablen**
+- Kein Hardcoding von:
+  - Hex-Werten
+  - Schatten
+  - Effekten
+- Dark-Theme als Standard (OS4-konform)
+
+---
+
+### Umsetzungsvorgabe (für Devs / KI-Builder)
+- Ein zentrales **Theme-/Config-File**
+  - Fonts
+  - Farben
+  - Abstände
+  - Akzentstile
+
+Keine CI-Logik im Komponenten-Code.
+
+---
+
+### Nutzen
+- Kunden-Branding ohne Neuaufbau
+- CORE-PULSE bleibt wiederverwendbar
+- Schnell anpassbar für Investoren / Demos
+
+---
+
+**CI ist Identität – nicht Implementierung.**
+
+---
+
+
 ### Grundsatz
 CORE-PULSE OS4 ist in Version 1 **bewusst Desktop-first** konzipiert.
 
