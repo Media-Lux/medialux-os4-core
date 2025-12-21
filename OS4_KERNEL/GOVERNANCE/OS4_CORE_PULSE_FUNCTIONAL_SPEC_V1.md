@@ -237,6 +237,55 @@ CORE-PULSE gilt als korrekt gebaut, wenn:
 
 ---
 
+---
+
+## 14. Device-Policy (V1 – verbindlich)
+
+### Grundsatz
+CORE-PULSE OS4 ist in Version 1 **bewusst Desktop-first** konzipiert.
+
+Diese Entscheidung ist **architektonisch gewollt** und kein technisches Defizit.
+
+---
+
+### Unterstützte Geräte (V1)
+
+- **Desktop / Large Screen:** ✅ voll unterstützt  
+  - Primäre Zielplattform
+  - Präsentation, Analyse, Wahrnehmung
+
+- **Tablet (Landscape):** ⚠️ eingeschränkt unterstützt  
+  - Read-only
+  - Präsentations- und Beobachtungsmodus
+  - Keine Interaktions- oder Fokus-Details
+
+- **Smartphone:** ❌ kein Zielgerät für CORE-PULSE OS4 V1  
+  - Keine Optimierung
+  - Keine Interaktionslogik
+  - Keine Pflicht zur Responsive-UX
+
+---
+
+### Begründung
+CORE-PULSE:
+- ist visuell komplex (Globus, Brain2Chain, Security-Ringe)
+- benötigt Ruhe, Raum und Übersicht
+- verliert auf kleinen Displays seine Bedeutung
+
+---
+
+### Ausblick
+- Mobile-/Tablet-Konzepte sind **bewusst** auf eine spätere Version (V2/V3) verschoben
+- Denkbar: Mini-Status-View, **kein** CORE-PULSE-Clone
+
+---
+
+### Vorgabe für Entwickler & KI-Builder
+> Do **not** optimize CORE-PULSE OS4 V1 for smartphone usage.  
+> Desktop and large screens only.
+
+---
+
 ## Leitformel
 
 > CORE-PULSE zeigt.  
