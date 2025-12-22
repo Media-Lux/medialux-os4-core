@@ -139,6 +139,36 @@ Bei Widersprüchen gilt folgende Reihenfolge:
 
 ---
 
+---
+
+## CORE-PULSE OS4 – Governance & Versioning (bindend)
+
+### Version V1
+- **OS4_CORE_PULSE_V1_LOCK_DECISION**  
+  Pfad: `OS4_KERNEL/GOVERNANCE/OS4_CORE_PULSE_V1_LOCK_DECISION.md`
+
+### Version V2 (Resting Pulse)
+- **OS4_CORE_PULSE_V2_RESTING_PULSE_MINI_SPEC**  
+  Pfad: `OS4_KERNEL/GOVERNANCE/OS4_CORE_PULSE_V2_RESTING_PULSE_MINI_SPEC.md`
+- **CORE-PULSE_OS4_V2_CHANGE_LOG**  
+  Pfad: `OS4_KERNEL/GOVERNANCE/CORE-PULSE_OS4_V2_CHANGE_LOG.md`
+- **OS4_CORE_PULSE_V2_LOCK_DECISION**  
+  Pfad: `OS4_KERNEL/GOVERNANCE/OS4_CORE_PULSE_V2_LOCK_DECISION.md`
+
+### Version V3 (Uncertainty Visibility)
+- **OS4_CORE_PULSE_V3_UNCERTAINTY_VISIBILITY_MINI_SPEC**  
+  Pfad: `OS4_KERNEL/GOVERNANCE/OS4_CORE_PULSE_V3_UNCERTAINTY_VISIBILITY_MINI_SPEC.md`
+- **CORE-PULSE_OS4_V3_CHANGE_LOG**  
+  Pfad: `OS4_KERNEL/GOVERNANCE/CORE-PULSE_OS4_V3_CHANGE_LOG.md`
+- **OS4_CORE_PULSE_V3_LOCK_DECISION**  
+  Pfad: `OS4_KERNEL/GOVERNANCE/OS4_CORE_PULSE_V3_LOCK_DECISION.md`
+
+**Hinweis:**  
+Alle CORE-PULSE Versionen sind **index-first** referenziert.  
+V1–V3 sind **LOCKED**; Erweiterungen erfordern eine neue Entscheidungsvorlage (V4+).
+
+---
+
 ## Abschluss
 Dieser Konsolidierungsindex ist die **einzige verbindliche Übersicht**
 über den aktuellen Regelstand des OS4 TRESOR.
