@@ -2,23 +2,36 @@
   "policy_id": "ATLAS-POLICY-1",
   "version": "1.0.0",
   "ts_utc": "2025-12-23T00:00:00Z",
+  "scope": "ATLAS_CASHFLOW_VAULT",
 
   "hard_constraints": {
-    "max_leverage": 1.30,
-    "min_cash_reserve": 0.15
+    "max_leverage": "1.30",
+    "min_cash_reserve": "0.15"
   },
 
   "guards": {
+    "leverage_hardcap_guard": {
+      "enabled": true,
+      "cap": "1.30",
+      "action_on_violation": "REJECT_ORDER"
+    },
+
+    "cash_reserve_guard": {
+      "enabled": true,
+      "floor": "0.15",
+      "action_on_violation": "REJECT_ORDER_AND_RAISE_RISK_EVENT"
+    },
+
     "depeg_guard": {
       "enabled": true,
       "stablecoins": ["USDC", "USDT", "DAI", "EURC"],
-      "peg_band_warn": 0.003,
-      "peg_band_crit": 0.010,
+      "peg_band_warn": "0.003",
+      "peg_band_crit": "0.010",
       "action_on_warn": "REDUCE_RISK",
-      "action_on_crit": "STOP_TRADE_AND_REBALANCE",
+      "action_on_crit": "STOP_TRADING_AND_REBALANCE",
       "override": {
         "allowed": true,
-        "requires_2step_gov": true,
+        "requires_2step_governance": true,
         "max_ttl_sec": 3600
       }
     },
@@ -26,49 +39,28 @@
     "funding_divergence_guard": {
       "enabled": true,
       "window_minutes": 60,
-      "warn_threshold_bps": 8,
-      "crit_threshold_bps": 20,
+      "warn_threshold_bps": "8",
+      "crit_threshold_bps": "20",
       "action_on_warn": "LOWER_LEVERAGE_TARGET",
-      "action_on_crit": "BASIS_SWITCH_ENGINE",
+      "action_on_crit": "TRIGGER_BASIS_SWITCH",
       "requires_evidence_hash": true
-    },
-
-    "basis_switch_engine": {
-      "enabled": true,
-      "switch_conditions": [
-        {
-          "if": "FUNDING_DIVERGENCE_CRIT",
-          "then": "SWITCH_TO_STABLE_CASHFLOW"
-        },
-        {
-          "if": "VENUE_OUTAGE_PRIMARY",
-          "then": "ROUTE_FAILOVER_OR_NO_TRADE"
-        },
-        {
-          "if": "PEG_DRIFT_CRIT",
-          "then": "REDUCE_RISK_AND_MOVE_TO_STRONGER_STABLE"
-        }
-      ],
-      "requires_2step_gov": true
-    },
-
-    "leverage_hardcap_guard": {
-      "enabled": true,
-      "cap": 1.30,
-      "action_on_violation": "REJECT_ORDER"
-    },
-
-    "cash_reserve_guard": {
-      "enabled": true,
-      "floor": 0.15,
-      "action_on_violation": "REJECT_ORDER_AND_RAISE_INCIDENT"
     }
+  },
+
+  "basis_switch_engine": {
+    "enabled": true,
+    "requires_2step_governance": true,
+    "switch_rules": [
+      { "if": "FUNDING_DIVERGENCE_CRIT", "then": "SWITCH_TO_STABLE_CASHFLOW" },
+      { "if": "PRIMARY_VENUE_OUTAGE", "then": "NO_TRADE_CIRCUIT_BREAK" },
+      { "if": "PEG_DRIFT_CRIT", "then": "REDUCE_RISK_AND_MOVE_TO_STRONGER_STABLE" }
+    ]
   },
 
   "venues": {
     "primary": "PING",
-    "failover": ["VENUE_A", "VENUE_B"],
-    "no_trade_on": ["MULTI_VENUE_OUTAGE"]
+    "failover": ["BINANCE", "OKX"],
+    "no_trade_conditions": ["MULTI_VENUE_OUTAGE"]
   },
 
   "audit": {
