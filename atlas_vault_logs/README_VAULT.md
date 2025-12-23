@@ -38,4 +38,27 @@ Es dient ausschließlich der **Revisionssicherheit, Nachvollziehbarkeit und Comp
 ---
 
 ## 📁 Ordnerstruktur
+---
+
+## Appendix A – Repository Implementation Status (Authoritative)
+
+This repository currently contains only this README file.
+All other components described below are intentionally absent and must be
+introduced explicitly via append-only commits.
+
+### Planned Repository Zones
+
+The following directories are defined as part of the ATLAS Vault Audit Ledger
+but are not yet instantiated:
+
+- /SCHEMAS/        → JSON Schemas for events, manifests, and governance proposals
+- /POLICIES/       → Deterministic guard and governance policies (hashable)
+- /VAULT_LOGS/     → Append-only JSONL event streams (trades, risk, governance)
+- /MANIFESTS/      → Merkle batch manifests anchoring VAULT_LOGS
+- /TOOLS/          → Deterministic verification and batch tooling
+- /GOLDEN_VECTORS/ → Reference hashes for reproducibility checks
+- /.github/workflows/ → CI validation enforcing append-only and hash rules
+
+No files in these zones exist yet.
+Their creation requires explicit Tresor-approved commits.
 
