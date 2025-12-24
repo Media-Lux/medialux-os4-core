@@ -1,0 +1,39 @@
+# OS4_ATLAS_VAULT_LOGS
+Status: ACTIVE  
+Zone: Tenant/Product (ATLAS)  
+Purpose: Append-only Audit Ledger + Governance Proof (Hybrid: GitHub logs + optional Core anchor)
+
+## 0) Ziel
+Dieses Modul ist die **einzige** Audit- und Proof-Zone für den ATLAS Vault.
+Es enthält:
+- Policies (Hardcaps/Guards)
+- Schemas (Validierung)
+- Vault Logs (JSONL Events)
+- Manifeste (Merkle Batch Proof)
+- Golden Vectors (Reproduzierbarkeit)
+- Tools (Verifier/Batch Builder)
+
+Keine Trading-Logik. Keine Secrets. Keine PII.
+
+---
+
+## 1) OS4-Namespace-Regel
+Dieses Modul ist OS4-konform benannt:
+- ✅ `OS4_*` Prefix
+- ❌ kein `atlas_*` Namespace
+
+---
+
+## 2) Nicht verhandelbare Regeln
+- Append-only: Event-Logs werden nur erweitert, niemals editiert/gelöscht.
+- Keine Doppelstrukturen:
+  - nur `SCHEMAS/` (kein `_SCHEMAS/`)
+  - nur `POLICIES/` (kein `params/`)
+  - nur `governance/` (kein `gov/`)
+- Canonical JSON: deterministische Hashes, keine Floats (Decimals als Strings).
+- Minimal Disclosure: auditierbar ohne Strategie-Offenlegung.
+- GitHub Workflows liegen im Repo-Root: `.github/workflows/` (nicht hier).
+
+---
+
+## 3) Canonical Struktur (ab jetzt verbindlich)
