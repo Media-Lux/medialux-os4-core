@@ -1,0 +1,33 @@
+# OS4 Awareness Entry Template
+# Purpose: Weekly awareness snapshot (reflection, not control)
+# Binding: NONE
+# Automation: FORBIDDEN
+
+date: YYYY-MM-DD
+
+state: balanced            # options: calm | balanced | tense | overloaded | incomplete
+feeling: clarity           # short descriptor (e.g., clarity, caution, focus)
+
+dominant_layer: TRESOR     # options: ATLAS | CORE_PULSE | TRESOR | AURELIUS
+
+impulse:
+  pulls_energy: ""         # what currently attracts attention (1 sentence)
+  friction_points: ""     # where resistance is felt (1 sentence)
+  residue_after_action: ""# what remains if nothing is done (1 sentence)
+
+layers_observed:
+  atlas: false             # true if memory/causality dominates this week
+  core_pulse: false        # true if rhythm/stability dominates
+  tresor: true             # true if governance/validation dominates
+  aurelius: false          # true if meaning/ethics dominates
+
+non_action_reason: ""      # why not acting is appropriate right now (1 sentence)
+
+awareness_note: ""         # free text (max 3 lines)
+closing_line: "Not every knowledge needs motion. Some knowledge needs awareness."
+
+meta:
+  owner: OS4_TRESOR
+  observer: "@chef"
+  scope: AWARENESS
+  review_cycle: weekly
