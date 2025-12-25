@@ -1,0 +1,54 @@
+{
+  "boot_packet_id": "OS4-BOOT-PACKET-1",
+  "version": "1.0.0",
+  "state": "ACTIVE",
+  "authority": "OS4_SYSTEM",
+  "purpose": "Bootstrap new chat sessions with the current OS4 project state and non-negotiable guardrails.",
+  "source_of_truth": "GitHub",
+  "must_read": [
+    "OS4_INDEX.md",
+    "OS4_PROJECT_STATE.md"
+  ],
+  "guardrails": {
+    "kernel_read_only": true,
+    "no_autonomy": true,
+    "no_placeholders": true,
+    "no_implicit_actions": true,
+    "vision_simulation_reality_separation": true,
+    "proof_layer_activation": "FORBIDDEN",
+    "anchoring_activation": "FORBIDDEN",
+    "trust_index_gating": "FORBIDDEN",
+    "meta_state_automation": "FORBIDDEN"
+  },
+  "current_state_summary": {
+    "maturity_percent": "68-70",
+    "dominant_layer": "TRESOR_GOVERNANCE",
+    "system_feeling": "balanced / clear with mild tension",
+    "handlungsdruck": "NO"
+  },
+  "operational_mode": {
+    "work_style": "manual_operator_driven",
+    "one_file_one_commit": true,
+    "append_only_logs": true
+  },
+  "allowed_next_steps": [
+    "observe_and_document",
+    "weekly_awareness_entry",
+    "study_notes_append",
+    "academy_material_capture"
+  ],
+  "forbidden_next_steps": [
+    "activate_proof_layer",
+    "activate_chain_anchoring",
+    "monetize_trust",
+    "introduce_autonomous_execution",
+    "edit_kernel_or_critical_files"
+  ],
+  "boot_instructions_for_new_chat": [
+    "Read OS4_INDEX.md and OS4_PROJECT_STATE.md first.",
+    "Confirm the guardrails above before doing any work.",
+    "Only propose changes that result in GitHub documents (path/commit/text).",
+    "Do not create duplicate paths or parallel namespaces.",
+    "If unsure: stop and ask OS4_TRESOR for a facts-only inventory."
+  ]
+}
