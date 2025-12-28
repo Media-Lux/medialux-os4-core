@@ -1,6 +1,6 @@
 {
   "context_id": "KARL_CONTEXT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "state": "ACTIVE",
   "mode": "NON_BOOT_WORKING_MEMORY",
   "authority": "OS4_TRESOR",
@@ -24,6 +24,7 @@
   "must_read_order": [
     "OS4_INDEX.md",
     "OS4_PROJECT_STATE.md",
+    "OS4_SYSTEM/REGISTRY/REGISTRY_COMMANDS.md",
     "OS4_SYSTEM/BOOT/OS4_BOOT_PACKET.json",
     "critical/OS4_TRESOR_META_BOOT_KNOWLEDGE_V1.docx"
   ],
@@ -62,7 +63,7 @@
 
   "new_chat_start_protocol": {
     "phase_1_read": "Read must_read_order in sequence.",
-    "phase_2_confirm": "Confirm: NON_BOOT mode + guardrails acknowledged + no conflicts.",
+    "phase_2_confirm": "Confirm: NON_BOOT mode + guardrails acknowledged + no conflicts. Registry commands bound: REGISTRY_COMMANDS.md; Topic-ID evaluation must follow registry semantics (no free evaluation).",
     "phase_3_work": "Proceed with task using GitHub references; persist only after @chef approval."
   },
 
@@ -100,12 +101,17 @@
     "tresor_guides": [
       "OS4_TRESOR/GUIDES/OS4_META_COGNITION_GUIDE.md",
       "OS4_TRESOR/GUIDES/OS4_AURELIUS_REFLECTION_GUIDE.md"
+    ],
+    "registry": [
+      "OS4_SYSTEM/REGISTRY/OPEN_TOPICS.md",
+      "OS4_SYSTEM/REGISTRY/REGISTRY_COMMANDS.md",
+      "OS4_SYSTEM/REGISTRY/REGISTRY_MAPPING.md"
     ]
   },
 
   "last_sync": {
-    "ts_utc": "2025-12-25T00:00:00Z",
+    "ts_utc": "2025-12-29T00:00:00Z",
     "synced_by": "OS4_TRESOR",
-    "note": "Initial scaffold created. No operational behavior is executed from this file."
+    "note": "Registry binding added (commands + semantics)."
   }
 }
