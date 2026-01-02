@@ -1,0 +1,107 @@
+# ============================================================
+# OS4 API BUILD HISTORY TEMPLATE
+# ============================================================
+# Zweck:
+#   Diese Datei definiert das standardisierte Schema für Build-Phasen-
+#   Einträge innerhalb der OS4 Tresor API Audit-Kette.
+#   Jeder Eintrag beschreibt den Verlauf, Status und Proof einer Phase (A–I).
+# ============================================================
+
+id: OS4_API_BUILD_HISTORY_TEMPLATE_2026
+title: "OS4 API Build History — Template"
+version: "2026-01-02-V1.0.0"
+domain: "audit.build"
+lifecycle: "TEMPLATE"
+authority: "@chef"
+mode: "READ-ONLY"
+scope: "Standardformat für Build- und Phase-Audit-Einträge im OS4 Tresor System"
+
+# ============================================================
+# Beispiel eines vollständigen Audit-Eintrags
+# ============================================================
+
+build_history:
+  - id: BUILD_PHASE_A
+    phase: "core-finance"
+    description: "Implementierung der Finanzgrundlage (Ledger, CompanyEntity, Ownership)"
+    commit_sha: "92cf046"          # letzter Build-Commit
+    report_file: "system/logs/build_reports/OS4_PHASE_A_REPORT_2026-01-02.md"
+    operator: "@chef"
+    devcore: "@devteam"
+    verifier: "@karl-agent"
+    auditor: "@livegpt-tresor"
+    status: "STABLE"
+    bsc_mode: "STRICT"
+    bsc_status: "PASSED"
+    feature_flags:
+      - "finance_enabled"
+      - "ledger_enabled"
+    checks:
+      api_health: "operational"
+      github_access: "enabled"
+      audit_access: "readable"
+      pending_count: 0
+      source_of_truth_match: true
+    result: "STABLE"
+    errors: []
+    timestamp: "2026-01-02T20:41:53Z"
+    next_phase: "B"
+    cross_refs:
+      - "system/strategy/OS4_TRESOR_API_BUILD_PLAN_V1.md"
+      - "system/docs/OS4_TRESOR_API_ROADMAP_V1.md"
+      - "system/logs/templates/OS4_API_BUILD_EXECUTION_REPORT_TEMPLATE_V1.md"
+      - "system/specs/OS4_BOOT_SELF_CHECK_RUN_SPEC_V1.md"
+
+# ============================================================
+# Felderklärung
+# ============================================================
+# id:            Eindeutige ID der Build-Phase
+# phase:         Kurzbezeichnung der Phase (A–I)
+# description:   Kurzbeschreibung der implementierten Funktion
+# commit_sha:    SHA des erfolgreichen Kernel-Pushes
+# report_file:   Pfad zum ausgefüllten Build-Execution-Report
+# operator:      verantwortlicher Operator (Freigabe)
+# devcore:       Entwicklungs-Team, das implementiert hat
+# verifier:      Governance-Agent (z. B. Karl)
+# auditor:       Audit-Instanz (z. B. Tresor)
+# status:        aktueller Build-Status (STABLE, WARN, BLOCKED)
+# bsc_mode:      STRlCT / RELAXED — Betriebsmodus des BSC
+# bsc_status:    PASSED / WARN / FAIL
+# feature_flags: aktive Feature Flags in dieser Phase
+# checks:        Status wichtiger Subsysteme (API, GitHub, Audit)
+# result:        finales Ergebnis der Phase
+# errors:        optionale Fehlermeldungen oder Abweichungen
+# timestamp:     UTC-Zeitpunkt des Abschlusses
+# next_phase:    Folgende Build-Phase
+# cross_refs:    referenzierte Spezifikationen und Berichte
+
+# ============================================================
+# Statuswerte
+# ============================================================
+# status:
+#   - STABLE                → alle Checks bestanden, Phase abgeschlossen
+#   - WARN                  → kleinere Abweichungen, weiterverfolgbar
+#   - BLOCKED               → kritischer Fehler, nächste Phase gesperrt
+#
+# bsc_status:
+#   - PASSED                → Boot Self-Check erfolgreich
+#   - WARN                  → nichtkritische Abweichung
+#   - FAIL                  → System inkonsistent, Schreibsperre aktiv
+# ============================================================
+
+# ============================================================
+# Governance-Referenzen
+# ============================================================
+# - system/specs/OS4_PENDING_SYSTEM_OPERATIONAL_SPEC_V1.md
+# - system/specs/OS4_BOOT_SELF_CHECK_RUN_SPEC_V1.md
+# - system/strategy/OS4_TRESOR_API_BUILD_PLAN_V1.md
+# - system/logs/templates/OS4_API_BUILD_EXECUTION_REPORT_TEMPLATE_V1.md
+# ============================================================
+
+# Hinweis:
+#   Jede Build-Phase (A–I) wird in einer eigenen YAML-Datei protokolliert:
+#   system/audit/OS4_API_BUILD_HISTORY_<YYYY-MM-DD>.yml
+# ============================================================
+
+# Powered by medialuxAI
+# OS4 Tresor · Audit Chain Standard
