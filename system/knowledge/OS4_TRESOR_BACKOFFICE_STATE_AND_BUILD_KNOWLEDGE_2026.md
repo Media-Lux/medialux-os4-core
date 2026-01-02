@@ -97,6 +97,89 @@
 Diese Fehler gelten als **verboten** ab diesem Stand.
 
 ---
+---
+
+## 🚪 CANONICAL ENTRYPOINT (VERBINDLICH)
+
+Diese Datei ist der **verbindliche Einstiegspunkt** für:
+
+- jeden neuen Chat
+- jeden Agenten (Karl, Agent3, LiveGPT OS4-Tresor)
+- jede neue Arbeitsphase
+
+**Regel:**
+
+> Keine Architektur, kein Entwurf, kein Vorschlag  
+> **bevor diese Datei gelesen und verstanden wurde.**
+
+Alle OS4-Instanzen **müssen** ihren Arbeitskontext aus dieser Datei ableiten.
+
+**Verstoß gilt als Architekturfehler.**
+
+---
+
+## 🔄 PENDING SYSTEM — STATUS & ZIELDEFINITION (KANONISCH)
+
+### Aktueller Implementierungsstand (VERIFIZIERT)
+
+| Schritt | Status | Bemerkung |
+|------|--------|-----------|
+| Pending Create | ✅ | Server-seitig (`/api/pending/create`) |
+| Pending List | ✅ | API + UI |
+| Pending Approve | ✅ | PIN → Push → Audit |
+| Pending Reject | ✅ | Audit + Archiv |
+| Pending Edit | ❌ | **bewusst verboten** |
+| Pending Delete | ❌ | **nicht vorgesehen (Auditpflicht)** |
+
+### Canonical Speicherorte (Source of Truth)
+
+- **Offen:** `system/pending/`
+- **Genehmigt:** `system/pending_approved/`
+- **Abgelehnt:** `system/pending_rejected/`
+- **Beweis / Verlauf:** `system/audit/OS4_PUSH_HISTORY_YYYY-MM-DD.yml`
+
+### Pending gilt als **VERIFIED**, wenn:
+
+1. Create → Approve → Push erfolgreich
+2. Commit-SHA im Audit-Log sichtbar
+3. Pending Count korrekt auf `0`
+4. SoT-Kachel zeigt letzten Push korrekt an
+
+---
+
+## 🧭 WIEDERAUFNAHME & FOKUSREGEL (AB JETZT VERBINDLICH)
+
+### Aktueller Fokus (PRIORITIZED)
+
+1. Pending Inbox UX finalisieren
+2. Audit-Parsing stabil halten
+3. **Erst danach:** Visual Intelligence / OS4-Körper
+
+### Verboten bis Fokus erledigt ist:
+
+- neue Module
+- neue Architektur-Patterns
+- neue CI-/ADM-Logik
+- neue Agentenrollen
+
+Diese Regel dient **Stabilität, Fokus und Durchhaltefähigkeit**.
+
+---
+
+## 🧠 „WO STEHEN WIR?“ — KURZANTWORT FÜR JEDEN CHAT
+
+- Governance: ✅ stabil
+- Push-Sicherheit: ✅ stabil
+- Pending-System: ✅ funktional
+- Audit: ✅ append-only
+- UI: ⚙️ funktionsfähig, optisch ausbaufähig
+- Nächster Schritt: **Pending UX → dann Visual Intelligence**
+
+---
+
+**Lifecycle Stage:** VERIFIED  
+**Revision:** 1.2  
+**Signature:** OS4_TRESOR_META_V1
 
 ## 📜 GOVERNANCE-FORMEL
 
