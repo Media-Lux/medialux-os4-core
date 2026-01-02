@@ -1,0 +1,27 @@
+{
+  "freeze": false,
+  "mode": "SOFT",
+  "scope": "pending_audit_truth_layer",
+  "description": "Soft freeze for Pending/Audit truth layer. UI is excluded. Changes require explicit approval.",
+  "lifecycle_stage": "OPEN",
+  "requirements": {
+    "e2e_runs_required": 2,
+    "e2e_definition": [
+      "approve_or_reject completes",
+      "audit_written_append_only",
+      "pending.status updated (resolved|rejected)",
+      "pending removed from open list",
+      "pending↔audit↔commit_sha relation persisted"
+    ],
+    "temporal_separation": "separate sessions (recommended ≥30 minutes)"
+  },
+  "criteria": {
+    "T1_approve_e2e_run_1": "OPEN",
+    "T1_approve_e2e_run_2": "OPEN",
+    "T2_reject_e2e": "OPEN",
+    "T3_parsing_specialchars": "OPEN",
+    "T4_failure_paths": "OPEN"
+  },
+  "last_success": [],
+  "snapshot_hash": null,
+  "notes": "Freeze may be set to true only afte
