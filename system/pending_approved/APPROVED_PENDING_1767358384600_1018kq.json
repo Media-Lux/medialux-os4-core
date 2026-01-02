@@ -1,0 +1,15 @@
+{
+  "id": "PENDING_1767358384600_1018kq",
+  "createdAt": "2026-01-02T12:53:04.600Z",
+  "requestedBy": "e2e-test",
+  "target": {
+    "path": "test/e2e-proof.md",
+    "content": "# E2E Proof\\n\\nGenerated at 2026-01-02T12:53:04+00:00",
+    "commitMessage": "[OS4-E2E] Pending create proof",
+    "branch": "main"
+  },
+  "status": "approved",
+  "approvedAt": "2026-01-02T12:53:12.694Z",
+  "commitSha": "def62ac90a000068e2e27672b8c6e032f525fe9c",
+  "commitUrl": "https://github.com/Media-Lux/medialux-os4-core/commit/def62ac90a000068e2e27672b8c6e032f525fe9c"
+}
