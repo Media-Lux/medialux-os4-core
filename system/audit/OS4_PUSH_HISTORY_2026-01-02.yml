@@ -1,0 +1,8 @@
+
+- id: PENDING_1767358384600_1018kq
+  action: approved
+  path: test/e2e-proof.md
+  commit_sha: def62ac90a000068e2e27672b8c6e032f525fe9c
+  operator_id: operator_pin_auth
+  timestamp: 2026-01-02T12:53:12.694Z
+  error_class: null
