@@ -6,3 +6,11 @@
   operator_id: operator_pin_auth
   timestamp: 2026-01-02T12:53:12.694Z
   error_class: null
+
+- id: PENDING_1767358402649_9f68m4
+  action: rejected
+  path: test/e2e-reject-test.md
+  commit_sha: null
+  operator_id: operator_pin_auth
+  timestamp: 2026-01-02T12:53:29.339Z
+  error_class: null
