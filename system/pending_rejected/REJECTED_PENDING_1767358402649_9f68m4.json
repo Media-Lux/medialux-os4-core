@@ -1,0 +1,13 @@
+{
+  "id": "PENDING_1767358402649_9f68m4",
+  "createdAt": "2026-01-02T12:53:22.649Z",
+  "requestedBy": "e2e-test",
+  "target": {
+    "path": "test/e2e-reject-test.md",
+    "content": "# Reject Test",
+    "commitMessage": "[OS4-E2E] For reject test",
+    "branch": "main"
+  },
+  "status": "rejected",
+  "rejectedAt": "2026-01-02T12:53:29.339Z"
+}
