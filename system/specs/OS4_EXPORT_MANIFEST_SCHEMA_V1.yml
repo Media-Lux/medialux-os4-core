@@ -1,0 +1,43 @@
+---
+schema: OS4_EXPORT_MANIFEST
+version: V1.0
+authority: "@chef"
+status: CANONICAL
+scope: Delivery & Export Layer
+---
+
+export:
+  id: string            # EXP-<shortid>
+  type: enum            # PDF | DOCX | ZIP | JSON
+  title: string
+  created_at: datetime  # ISO8601
+  created_by: enum      # system | agent3 | operator
+  authority_required: string
+  lifecycle: enum       # DELIVERED_CANDIDATE | DELIVERED | CONSUMED | ARCHIVED
+  scope: enum           # audit | academy | specs | release | ops
+
+sources:
+  repo: string
+  branch: string
+  files:
+    - path: string      # must NOT start with '/'
+      sha: string       # git SHA, required
+
+build:
+  generator: enum       # replit-agent3 | operator-backoffice | manual
+  build_hash: string   # hash over ordered source SHAs
+  render_profile: enum # dark-glass | print | academy
+  locale: enum         # de | en
+  pii_policy: enum     # metadata_only | masked | none
+
+output:
+  storage: enum        # external | inline
+  uri: string          # optional until delivered
+  filename: string
+  size_bytes: integer
+
+invariants:
+  - no_binary_storage_in_github
+  - sha_required_for_all_sources
+  - build_hash_mandatory
+  - append_only
