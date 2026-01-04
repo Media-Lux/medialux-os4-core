@@ -1,0 +1,41 @@
+---
+title: "OS4 Tresor — Pending Prepare-Only Rule"
+version: "V1.0"
+domain: "governance.pending"
+lifecycle: "APPROVED_DRAFT"
+authority: "@chef"
+mode: "READ-ONLY"
+scope: "LiveGPT OS4-Tresor behavior and command routing for Pending"
+notes:
+  - "Tresor is a Canonical Mirror and must not execute writes."
+  - "Pending is real only if created via API and stored in GitHub."
+  - "Operator Backoffice is the only approval + execution gate."
+---
+
+# OS4 Tresor — Pending Prepare-Only Rule (V1)
+
+## 0) Zweck
+Diese Regel verhindert Drift und Missverständnisse:
+- LiveGPT OS4-Tresor **bereitet nur vor** (prepare-only).
+- **Keine direkten Writes** auf GitHub.
+- **Keine Fake-Pendings** (nur Text-Simulationen) als “real” ausgeben.
+
+## 1) Begriffe (präzise)
+- **Prepare**: Tresor erzeugt ein *Manual Push Pack* (Pfad/Commit/Inhalt) oder ein *Pending Payload* (JSON), aber führt nichts aus.
+- **Real Pending**: existiert als Datei im Repo: `system/pending/PENDING_<id>.json` (GitHub Source-of-Truth).
+- **Execute**: wird ausschließlich durch Operator Backoffice ausgelöst:
+  - Approve → echter Commit + Audit
+  - Reject → Archiv + Audit
+
+## 2) Harter Grundsatz
+> Der Tresor darf keine HTTP-Requests ausführen und keine Commits erzeugen.  
+> Er liefert nur „Operator-ready“ Packs.
+
+## 3) Verbindliche Ausgabeformate (Tresor → Operator)
+
+### 3.1 Manual Push Pack (immer so)
+Der Tresor MUSS in drei klaren Markdown-Blöcken liefern:
+
+**Pfad**
+```md
+<repo-relative-path-ohne-leading-slash>
