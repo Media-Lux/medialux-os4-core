@@ -1,0 +1,8 @@
+
+- id: PENDING_1767567379557_hs8hjv
+  action: rejected
+  path: system/logs/test/PENDING_BACKOFFICE_PROOF.md
+  commit_sha: null
+  operator_id: operator_pin_auth
+  timestamp: 2026-01-05T00:12:30.229Z
+  error_class: null
