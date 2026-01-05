@@ -1,0 +1,15 @@
+{
+  "id": "PENDING_1767617175075_up38xp",
+  "createdAt": "2026-01-05T12:46:15.075Z",
+  "requestedBy": "backoffice_test",
+  "target": {
+    "path": "system/logs/test/PENDING_BACKOFFICE_PROOF.md",
+    "content": "# Pending Proof\n\nCreated: 2026-01-05T12:46:15.075Z\nPending ID: PENDING_1767617175075_up38xp\n\nIf approved, this file exists.\n",
+    "commitMessage": "test(pending): backoffice create pending proof",
+    "branch": "main"
+  },
+  "status": "approved",
+  "approvedAt": "2026-01-05T12:47:07.048Z",
+  "commitSha": "9e535bedea572b16eed7d5e146addf090cd69fc5",
+  "commitUrl": "https://github.com/Media-Lux/medialux-os4-core/commit/9e535bedea572b16eed7d5e146addf090cd69fc5"
+}
