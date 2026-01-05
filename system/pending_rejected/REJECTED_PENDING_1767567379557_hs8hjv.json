@@ -1,0 +1,13 @@
+{
+  "id": "PENDING_1767567379557_hs8hjv",
+  "createdAt": "2026-01-04T22:56:19.557Z",
+  "requestedBy": "backoffice_test",
+  "target": {
+    "path": "system/logs/test/PENDING_BACKOFFICE_PROOF.md",
+    "content": "# Pending Proof\n\nCreated: 2026-01-04T22:56:19.557Z\nPending ID: PENDING_1767567379557_hs8hjv\n\nIf approved, this file exists.\n",
+    "commitMessage": "test(pending): backoffice create pending proof",
+    "branch": "main"
+  },
+  "status": "rejected",
+  "rejectedAt": "2026-01-05T00:12:30.229Z"
+}
