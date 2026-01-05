@@ -16,8 +16,8 @@ schema_ref: OS4_WORKING_BRAIN/OS4_WORKING_BRAIN_STATE.md
   title: "Enable ContextRouter (Working Brain Backbone)"
   repo_path: "OS4_SYSTEM/OS4_INTELLIGENCE/WORKING_BRAIN_CORE.yaml"
   lifecycle: CAPTURED
-  status: blocked
-  blocker: "ContextRouter not registered/active"
+  status: active
+  blocker: ""
   why_now: "Ohne ContextRouter kann OS4 den Arbeitskontext über Chats hinweg nicht halten."
   benefit: "Kontext bleibt stabil, du musst nicht mehr alles im Kopf behalten."
   outcome: "Ein konsistentes Rückenmark für Fokus, Modus und Next-Step-Führung."
@@ -84,3 +84,11 @@ schema_ref: OS4_WORKING_BRAIN/OS4_WORKING_BRAIN_STATE.md
   item_id: "WB-ACT-001"
   reason: "Initial fill with core blockers to make guidance immediately usable."
   based_on: "Lifecycle/Blocker/Dependency"
+
+- at: 2026-01-05
+  action: "unblocked"
+  from: "blocked"
+  to: "active"
+  item_id: "WB-ACT-001"
+  reason: "ContextRouter endpoint /api/context/snapshot is live and responding (HTTP 200)."
+  based_on: "Verified endpoint deployment"
