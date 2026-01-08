@@ -11,6 +11,8 @@ import WorkspaceDefault from "../components/WorkspaceDefault";
 import AutoPushPendingPanel from "../components/AutoPushPendingPanel";
 import SoTStatusCard from "../components/SoTStatusCard";
 import WorkingBrainPanel from "../components/WorkingBrainPanel";
+import AuditHistoryPanel from "../components/AuditHistoryPanel";
+import RepublishWidget from "../components/RepublishWidget";
 import { Watermark, Footer } from "../components/Branding";
 import { Puzzle, History, Home, Clock } from "lucide-react";
 
@@ -56,15 +58,17 @@ export default function OperatorShell() {
       case "Dashboard":
         return (
           <>
-            <main className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <div className="flex items-center gap-2 mb-4">
+            <main className="rounded-xl border border-white/10 bg-white/5 p-4 space-y-4">
+              <div className="flex items-center gap-2 mb-2">
                 <Home className="w-4 h-4 opacity-70" />
                 <span className="text-sm font-medium">{t("workspace.title")}</span>
               </div>
               <WorkspaceDefault onOpenPending={() => setView("AutoPending")} />
+              <AuditHistoryPanel />
             </main>
             <aside className="space-y-4">
               <SoTStatusCard />
+              <RepublishWidget />
               <WorkingBrainPanel />
               <div className="rounded-xl border border-slate-500/20 p-4" style={{ background: "linear-gradient(135deg, rgba(71,85,105,0.1) 0%, rgba(51,65,85,0.08) 100%)", backdropFilter: "blur(8px)" }}>
                 <div className="text-sm font-medium text-slate-300 mb-3">{t("workspace.quickInfo")}</div>
