@@ -10,6 +10,18 @@ from datetime import datetime, timezone
 from typing import Any, Dict, Optional, Callable
 import json
 import uuid
+import sys
+import os
+
+# Add parent path for sibling module import
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+try:
+    from OS4_WORKING_BRAIN.DECISION_MEMORY_APPEND import append_decision
+    HAS_FILE_SINK = True
+except ImportError:
+    HAS_FILE_SINK = False
+    append_decision = None
 
 
 @dataclass
@@ -48,11 +60,12 @@ class Brain2ChainAdapter:
 
 class DecisionMemoryLogger:
     """
-    Phase 1 logger (in-memory sink).
-    Actual persistence is implemented in OS4_WORKING_BRAIN/DECISION_MEMORY_APPEND.py
+    Phase 1 logger with file-append sink.
+    Writes to system/decision_memory/decision_memory.jsonl via append_decision().
+    Falls back to print on error.
     """
     def __init__(self, sink: Optional[Callable[[Dict[str, Any]], None]] = None):
-        self.sink = sink or self._default_sink
+        self.sink = sink or self._file_sink
 
     def log(self, event: OS4Event, status: str, note: str = "") -> None:
         entry = {
@@ -66,7 +79,32 @@ class DecisionMemoryLogger:
         self.sink(entry)
 
     @staticmethod
+    def _file_sink(entry: Dict[str, Any]) -> None:
+        """Append to JSONL file, fallback to print on error."""
+        # Always print for visibility
+        print(f"[DecisionMemoryLogger] {entry.get('status', '?')}: {entry.get('note', '')}")
+        
+        if HAS_FILE_SINK and append_decision is not None:
+            try:
+                line = append_decision(entry)
+                print(f"[DecisionMemoryLogger] Written to JSONL: {len(line)} bytes")
+            except PermissionError as e:
+                print(f"[DecisionMemoryLogger] WARN: Permission denied, logging to stdout: {e}")
+                print(json.dumps(entry, ensure_ascii=False))
+            except OSError as e:
+                print(f"[DecisionMemoryLogger] WARN: File error, logging to stdout: {e}")
+                print(json.dumps(entry, ensure_ascii=False))
+            except Exception as e:
+                print(f"[DecisionMemoryLogger] WARN: Unexpected error, logging to stdout: {e}")
+                print(json.dumps(entry, ensure_ascii=False))
+        else:
+            # Fallback: no file sink available
+            print("[DecisionMemoryLogger] Log entry (no file sink):")
+            print(json.dumps(entry, ensure_ascii=False, indent=2))
+
+    @staticmethod
     def _default_sink(entry: Dict[str, Any]) -> None:
+        """Legacy print-only sink."""
         print("[DecisionMemoryLogger] Log entry:")
         print(json.dumps(entry, ensure_ascii=False, indent=2))
 
